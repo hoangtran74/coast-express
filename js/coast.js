@@ -309,7 +309,7 @@ const handleGaugeHandler = (val) => {
 */
 async function latencyCheck() {
 	var startDate = new Date();
-    let response = await fetch('/coast/images/icons/icon.png',{
+    let response = await fetch('/coast-express/images/icons/icon.png',{
 		method: "GET",
 		headers: {
 		"Access-Control-Allow-Origin": "*",
@@ -341,7 +341,7 @@ function checkUploadSpeed(iterations) {
   check();
 
   function check() {
-      var url = '/coast?cache=' + Math.floor(Math.random() * 10000); //prevent url cache
+      var url = '/coast-express?cache=' + Math.floor(Math.random() * 10000); //prevent url cache
       var data = getRandomString(1); //1 megabit POST size handled by all servers
       var startTime;
       var speed = 0;
